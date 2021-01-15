@@ -25,7 +25,11 @@
 
 	body {
 		line-height: 1;
-		scrollbar-width: none;
+		scrollbar-width: none !important;
+		overflow-y: scroll;
+		overflow: -moz-scrollbars-none;
+		-ms-overflow-style: none;
+		
 	}
 
 	ol, ul {
@@ -1410,6 +1414,11 @@
 
 	}
 
+	html {
+		overflow: -moz-scrollbars-none;
+		scrollbar-width: none;
+	}
+
 	body::-webkit-scrollbar {
 		display: none;
 	}
@@ -2395,6 +2404,8 @@
 		flex-direction: row;
 		position: relative;
 		margin: 0 0 2em -2em;
+		scrollbar-width: none !important;
+		overflow: auto;
 	}
 
 		.messages .messages-text-container {
@@ -2441,7 +2452,7 @@
 
 			.messages a:hover, .messages .has-translation:hover {
 				background-color: rgba(255, 255, 255, 1);
-				box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.25), 0 0 0.5em 0 #63b6ff;
+				box-shadow: inset 0 0 0 3px rgba(255, 255, 255, 0.1), 0 0 1em 0 #00bbff;
 			}
 
 		.messages > div {
@@ -2662,4 +2673,7 @@
 	#background-dimmer {
 		background-color: rgba(0,0,0,.5);
 		width: 100vw;
+		overflow: none;
+		scrollbar-width: none !important;
+		overflow: auto;
 	}
