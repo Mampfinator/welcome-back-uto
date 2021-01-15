@@ -28,12 +28,13 @@ $(function() {
 		});
 
 	// Poptrox.
-		$window.on('load', function() {
+		// move to load content
+		/*$window.on('load', function() {
 
 			$('.messages').poptrox({
 				onPopupClose: function() { $body.removeClass('is-covered'); },
 				onPopupOpen: function() { $body.addClass('is-covered'); },
-				baseZIndex: 10001,
+				baseZIndex: 10001
 				useBodyOverflow: false,
 				usePopupEasyClose: true,
 				overlayColor: '#000000',
@@ -44,6 +45,6 @@ $(function() {
 				windowMargin: (skel.breakpoint('small').active ? 5 : 50)
 			});
 
-		});
+		});*/
 
 });

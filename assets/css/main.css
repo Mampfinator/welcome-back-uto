@@ -1,6 +1,6 @@
 @charset "UTF-8";
 @import url(font-awesome.min.css);
-@import url("http://fonts.googleapis.com/css?family=Source+Sans+Pro:200");
+/*@import url("http://fonts.googleapis.com/css?family=Source+Sans+Pro:200");*/
 
 /*
 	Visualize by TEMPLATED
@@ -2234,7 +2234,7 @@
 		background-color: #FF6382;
 		border-radius: 4px;
 		border: 0;
-		color: !important;
+		/*color: !important;*/
 		cursor: pointer;
 		display: inline-block;
 		font-weight: 200;
@@ -2344,7 +2344,7 @@
 		button.special,
 		.button.special {
 			background-color: #FF6382;
-			color: !important;
+			/*color: !important;		figure out why this was blank*/
 		}
 
 			input[type="submit"].special:hover,
@@ -2412,6 +2412,10 @@
 			padding: 10px;
 		}
 
+		.messages .messages-image-container {
+			padding: 0;
+		}
+
 		.messages a, .messages .has-translation {
 			cursor: pointer;
 		}
@@ -2435,6 +2439,7 @@
 			color: blacK;
 			font-weight: 900;
 		}
+		
 
 			.messages a img {
 				display: block;
@@ -2621,7 +2626,11 @@
 	}
 
 		#header h1 {
-			color: rgba(255, 255, 255, 0.65);
+			color: rgba(255, 255, 255, 1);
+		}
+
+		#header h2 {
+			color: rgba(255, 255, 255, 1);
 		}
 
 		#header .avatar {
@@ -2673,6 +2682,7 @@
 	#background-dimmer {
 		background-color: rgba(0,0,0,.5);
 		width: 100vw;
+		min-height: 100vh;
 		overflow: none;
 		scrollbar-width: none !important;
 		overflow: auto;

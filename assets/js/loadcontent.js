@@ -2,15 +2,11 @@ var messages;
 const messagesFontSize = parseFloat(getComputedStyle($(".messages").get(0)).fontSize);
 
 
-$(function() {
+$(document).on("ready", function() {
     
     var currentSmallest;
-
     $.getJSON("assets/js/messagecontent.json", () => {}).done( (data)=> {
         messages = data;
-
-
-        
 
         for (const [key, value] of Object.entries(messages)) {
            
@@ -31,13 +27,15 @@ $(function() {
                 `);
             } else if (value.type == "image") {
                 toAppend.append(`
-                    <a href="images/artworks/${value.name}">
-                        <img src="images/artworks/${value.name}" alt="" />
+                    <a href="images/artworks/${value.name}" data-poptrox="">
+                        <img src="images/artworks/${value.name}" alt="Image could not be loaded!" title="${key}'s Artwork" />
                         <h3>${key}</h3>
                     </a>
                 `)
             }
         }
+
+
         $(".messages-text-container.has-translation").on("click", function() {
             $(this).attr("data-language", toggleLanguage($(this).attr("data-language")))
             var el = this;
@@ -49,9 +47,25 @@ $(function() {
         })
 
 
-        $(".messages").children().each((index, child) => {
-            console.log($(child).height())
-        })
+        // Poptrox stuff moved from main.js
+
+    }).done(function() {
+        console.log("Adding poptrox functionality.")
+        $(".messages").children().each( function(index, child) {
+            $(child).poptrox({
+                onPopupClose: function() { $body.removeClass('is-covered'); },
+                onPopupOpen: function() { $body.addClass('is-covered'); },
+                baseZIndex: 10001,
+                useBodyOverflow: false,
+                usePopupEasyClose: true,
+                overlayColor: '#000000',
+                overlayOpacity: 0.75,
+                popupLoaderText: '',
+                fadeSpeed: 500,
+                usePopupDefaultStyling: false,
+                windowMargin: (skel.breakpoint('small').active ? 5 : 50)
+            });
+        });
     })
 })
 
@@ -76,4 +90,3 @@ function toggleLanguage(curLang) {
         return "original"
     }
 }
-
