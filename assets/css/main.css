@@ -2394,6 +2394,7 @@
 /* Messages */
 
 	.messages {
+		white-space: pre-line;
 		display: -moz-flex;
 		display: -webkit-flex;
 		display: -ms-flex;
