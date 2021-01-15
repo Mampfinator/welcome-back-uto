@@ -2396,6 +2396,14 @@
 		margin: 0 0 2em -2em;
 	}
 
+		.messages .messages-text-container {
+			padding: 10px;
+		}
+
+		.messages a, .messages .has-translation {
+			cursor: pointer;
+		}
+
 		.messages a, .messages .messages-text-container {
 			-moz-transition: all 0.2s ease;
 			-webkit-transition: all 0.2s ease;
@@ -2409,7 +2417,7 @@
 			border-radius: 4px;
 			box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.25);
 			background-color: rgba(255, 255, 255, 1);
-			cursor: pointer;
+			/*cursor: pointer;*/
 			outline: 0;
 			scrollbar-width: none;
 			color: blacK;
@@ -2430,9 +2438,9 @@
 				border-top: 1px solid rgba(0,0,0,.5)
 			}
 
-			.messages a:hover, .messages .messages-text-container:hover {
+			.messages a:hover, .messages .has-translation:hover {
 				background-color: rgba(255, 255, 255, 1);
-				box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.25), 0 0 0.5em 0 #FF6382;
+				box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.25), 0 0 0.5em 0 #63b6ff;
 			}
 
 		.messages > div {
@@ -2653,5 +2661,4 @@
 	#background-dimmer {
 		background-color: rgba(0,0,0,.5);
 		width: 100vw;
-		position: fixed;
 	}
