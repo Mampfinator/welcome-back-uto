@@ -3,10 +3,10 @@ const messagesFontSize = parseFloat(getComputedStyle($(".messages").get(0)).font
 
 
 $(document).on("ready", function() {
-    
+
     var currentSmallest;
-    $.getJSON("assets/js/messagecontent.json", () => {}).done( (data)=> {
-        messages = data;
+    $.getJSON("assets/js/messagecontent.json", (data) => {messages = data})
+    .done(function() {
 
         for (const [key, value] of Object.entries(messages)) {
            
@@ -49,7 +49,6 @@ $(document).on("ready", function() {
 
         // Poptrox stuff moved from main.js
 
-    }).done(function() {
         console.log("Adding poptrox functionality.")
         $(".messages").children().each( function(index, child) {
             $(child).poptrox({
@@ -66,7 +65,7 @@ $(document).on("ready", function() {
                 windowMargin: (skel.breakpoint('small').active ? 5 : 50)
             });
         });
-    })
+    });
 })
 
 // .height() doesn't work correctly; best thing I could come up with in the meantime as the spacing between elements is always the same
