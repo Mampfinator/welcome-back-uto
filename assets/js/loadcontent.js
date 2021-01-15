@@ -28,7 +28,7 @@ $(document).on("ready", function() {
             } else if (value.type == "image") {
                 toAppend.append(`
                     <a href="images/artworks/${value.name}" data-poptrox="">
-                        <img src="images/artworks/${value.name}" alt="Image could not be loaded!" title="${key}'s Artwork" />
+                        <img src="images/thumbs/${value.name}" alt="Image could not be loaded!" title="${key}'s Artwork" />
                         <h3>${key}</h3>
                     </a>
                 `)
