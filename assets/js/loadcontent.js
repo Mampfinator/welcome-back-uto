@@ -53,8 +53,8 @@ $(document).on("ready", function() {
         console.log("Adding poptrox functionality.")
         $(".messages").children().each( function(index, child) {
             $(child).poptrox({
-                onPopupClose: function() { $body.removeClass('is-covered'); },
-                onPopupOpen: function() { $body.addClass('is-covered'); },
+                onPopupClose: function() { $('body').removeClass('is-covered'); },
+                onPopupOpen: function() { $('body').addClass('is-covered'); },
                 baseZIndex: 10001,
                 useBodyOverflow: false,
                 usePopupEasyClose: true,
