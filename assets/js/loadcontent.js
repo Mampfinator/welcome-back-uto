@@ -29,6 +29,7 @@ $(document).on("ready", function() {
                 toAppend.append(`
                     <a href="images/artworks/${value.name}" data-poptrox="">
                         <img src="images/thumbs/${value.name}" alt="Image could not be loaded!" title="${key}'s Artwork" />
+                        ${"text" in value? `<div class="short-image-text">${value.text}</div>` : ""}
                         <h3>${key}</h3>
                     </a>
                 `)

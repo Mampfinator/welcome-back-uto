@@ -2688,3 +2688,6 @@
 		scrollbar-width: none !important;
 		overflow: auto;
 	}
+	.short-image-text {
+		padding: 0;
+	}
