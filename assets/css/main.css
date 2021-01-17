@@ -23,6 +23,10 @@
 		display: block;
 	}
 
+	body, html {
+		height: 100%;
+	}
+
 	body {
 		line-height: 1;
 		scrollbar-width: none !important;
@@ -1422,13 +1426,22 @@
 	body::-webkit-scrollbar {
 		display: none;
 	}
-
-	body {
-		background-color: #000;
-		background-image: url("../../images/bg.jpg");
+	.parallax-scroll {
+		background-attachment: fixed;
+		background-position: center;
+		background-repeat: no-repeat;
 		background-size: cover;
+		height: 300%;
+		width: 100%;
+	}
+	body {
+		background-image: url("../../images/utopia_welcomebackuto.png");
+		position: relative;
+		background-color: #000;
+		background-size: 100% auto;
 		background-position: top center;
 		background-attachment: fixed;
+		background-repeat: no-repeat;
 		-ms-overflow-style: none;
 		scrollbar-width: none;
 	}
@@ -1447,7 +1460,7 @@
 /* Type */
 
 	body, input, select, textarea {
-		color: rgba(255, 255, 255, 0.65);
+		color: rgba(255, 255, 255, 1);
 		font-family: "Source Sans Pro", Helvetica, sans-serif;
 		font-size: 13pt;
 		font-weight: 200;
@@ -2448,6 +2461,7 @@
 				border-top-left-radius: 4px;
 				border-top-right-radius: 4px;
 				width: 100%;
+				border-radius: 0;
 			}
 
 			.messages a h3, .messages .messages-text-container h3 {
@@ -2693,4 +2707,17 @@
 	.short-image-text {
 		padding: 0;
 		font-size: 13px;
+	}
+	/* optimize for mobile */
+		
+		#welcome-back-uto {
+			font-size: 6em; 
+			text-align: center;
+			animation: welcomeback-animation;
+			animation-duration: 500ms;
+		}
+
+	@keyframes welcomeback-animation {
+		from {visibility: hidden;}
+		to {visibility: visible;}
 	}

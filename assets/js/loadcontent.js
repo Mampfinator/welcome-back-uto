@@ -31,8 +31,8 @@ $(document).ready(async function() {
             } else if (value.type == "image") {
                 
                 toAppend.append(`
-                    <a href="images/artworks/${value.name}" data-poptrox="">
-                        <img src="images/thumbs/${value.name}" alt="Image could not be loaded!" title="${key}'s Artwork" />
+                    <a href="images/artworks/${value.name}" data-fancybox data-caption="${key}'s Artwork">
+                        <img src="images/thumbs/${value.name}" alt="Image could not be loaded!"/>
                         ${"text" in value? `<div class="short-image-text">${value.text}</div>` : ""}
                         <h3>${key}</h3>
                     </a>
