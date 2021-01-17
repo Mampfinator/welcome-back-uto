@@ -5,7 +5,8 @@
     },
     "DBAlex" : {
         "type": "image",
-        "name": "alex_ichigo.png"
+        "name": "alex_ichigo.png",
+        "text": "おかえりなさい、うとちゃん！お久しぶりですね!"
     },
     "Bapu": {
         "type": "text",
@@ -35,7 +36,7 @@
     "Solid Liquid": {
         "type": "image",
         "name": "squid_tenshi.jpg",
-        "text": "こんにちは、天使さん。戻ってきてくれて、またストリーミングを始めてくれて嬉しいです! 今年も元気で健康でいられることを願っています! これからも応援しています! -Solid Liquid | Squid イカ"
+        "text": "こんにちは、天使さん。戻ってきてくれて、また配信を始めてくれて嬉しいです! 今年も元気で健康でいられることを願っています! これからも応援しています! -Solid Liquid | Squid イカ"
     },
     "Comfy-Kun": {
         "type": "text",
@@ -47,14 +48,23 @@
     },
     "Bun'neza": {
         "type": "text",
-        "original": "何があっても\n\n私は決してあなたを置いて行かない\n\nまた会いたいね\n\n\nお帰りなさい"
+        "original": "何があっても\n\n私は決してあなたを置いて行かない\n\nまた会おう\n\n\nお帰りなさい"
     },
     "FlyPapi": {
         "type": "text",
-        "original": "Tenshi-san! ☁\nあなたがいなくなった日々は、私たちを迷わせ、悲しませましたが、私たちはみんなが大好きな天使からの特別な笑顔を待ち続けました! あなたは私の日々を明るくしてくれました! だから、これからもできる限りの恩返しをしていきたいと思います。もう大丈夫だといいですね! 私とTenshimpsスはいつでもあなたのそばにいます。おかえりなさい!!!❤️"
+        "original": "Tenshi-san! ☁\nあなたがいなくなった日々は、私たちを迷わせ、悲しませましたが、私たちはみんなが大好きな天使からの特別な笑顔を待ち続けました! あなたは私の日々を明るくしてくれました! だから、これからもできる限りの恩返しをしていきたいと思います。もう大丈夫だといいですね! 私とTenshimpsはいつでもあなたのそばにいます。おかえりなさい!!!❤️"
     },
     "Ono Anastasia": {
         "type": "text",
         "original": "Tenshi-san!\n Please come back.\n I promised you to be a VTuber just like you.\n I will be like that soon.\n You are the only oil that can reignite my flame to do YouTube once again!"
+    },
+    "Konga Ooga": {
+        "type": "image",
+        "name": "konga_ooga_imback.png"
+    },
+    "Lmao Ice": {
+        "type": "text",
+        "original": "Ice to meet you, Ice miss you.\nIce is lonely without you.\nIce is melted thanks to you.\nIce just want to cheer for you.\nIce's akasupa is there for you.\nIce just want to be with you.\nIce is not Ice when you not you.\nIce will always be there for you.\nLast but not least Ice care for you.\nUto Uto Ice(愛)してる."
     }
+
 }

@@ -19,11 +19,4 @@ $(function() {
 			small:	'(max-width: 736px)',
 			xsmall:	'(max-width: 480px)'
 		});
-
-	// Disable animations/transitions until everything's loaded.
-		$body.addClass('is-loading');
-
-		$window.on('load', function() {
-			$body.removeClass('is-loading');
-		});
 });

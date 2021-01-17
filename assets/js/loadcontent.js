@@ -1,22 +1,25 @@
 var messages;
 const messagesFontSize = parseFloat(getComputedStyle($(".messages").get(0)).fontSize);
 
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
 
-$(document).on("ready", function() {
+$(document).ready(async function() {
 
     var currentSmallest;
-    $.getJSON("assets/js/messagecontent.json", (data) => {messages = data})
-    .done(function() {
+    await $.getJSON("assets/js/messagecontent.json", (data) => {messages = data})
+
 
         for (const [key, value] of Object.entries(messages)) {
-           
+            await sleep(10);
+            
             var toAppend = $("#messages-1");
             $(".messages").children().each((index, value) => {
                 if (getContentHeightSum($(value)) < getContentHeightSum(toAppend)) { 
                     toAppend = $(value)
                 }
             })
-            
 
             if (value.type == "text") {
                 toAppend.append(`
@@ -26,6 +29,7 @@ $(document).on("ready", function() {
                     </div>
                 `);
             } else if (value.type == "image") {
+                
                 toAppend.append(`
                     <a href="images/artworks/${value.name}" data-poptrox="">
                         <img src="images/thumbs/${value.name}" alt="Image could not be loaded!" title="${key}'s Artwork" />
@@ -47,10 +51,7 @@ $(document).on("ready", function() {
             })
         })
 
-
-        // Poptrox stuff moved from main.js
-
-        console.log("Adding poptrox functionality.")
+        /*console.log("Adding poptrox functionality.")
         $(".messages").children().each( function(index, child) {
             $(child).poptrox({
                 onPopupClose: function() { $('body').removeClass('is-covered'); },
@@ -65,11 +66,10 @@ $(document).on("ready", function() {
                 usePopupDefaultStyling: false,
                 windowMargin: (skel.breakpoint('small').active ? 5 : 50)
             });
-        });
-    });
+        });*/
+    //});
 })
 
-// .height() doesn't work correctly; best thing I could come up with in the meantime as the spacing between elements is always the same
 function getContentHeightSum(parent) {
     var sum = 0;
     parent.children("a, div").each( (index, child) => {
@@ -77,6 +77,7 @@ function getContentHeightSum(parent) {
         if ($($(child).find("img")[0]).is("img")) {
             var imgChild = $($(child).find("img")[0]);
             sum += imgChild.prop("naturalHeight")*((screen.width/3)/imgChild.prop("naturalWidth"))
+            sum += 3*messagesFontSize;
         }
     })
     return sum;
