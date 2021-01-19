@@ -89,5 +89,14 @@
     "Soulhunter": {
         "type": "image",
         "name": "soul_fuyunoshimo.png"
+    },
+    "raylin": {
+        "type": "text",
+        "original": "天使いない\nここは寂しい\n痛いです"
+    },
+    "Wet Floor": {
+        "type": "image",
+        "name": "welcome_back_utogrey.jpg",
+        "text": "Good morning, sunshine!\nMornings missed you.\nI miss you."
     }
 }

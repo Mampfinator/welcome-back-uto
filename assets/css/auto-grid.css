@@ -1,0 +1,17 @@
+.messages {
+    height: auto;
+    scrollbar-width: none;
+}
+.messages::-webkit-scrollbar {
+    display: none;
+}
+
+.messages .messages-text-container, .messages a {
+    width: calc(calc(100% /3) - 10px);
+    margin-top: 10px;
+    float: left;
+}
+
+#messages-sizer {
+    min-width: 100vw;
+}
