@@ -31,8 +31,8 @@ $(document).ready(async function() {
             } else if (value.type == "image") {
                 
                 toAppend.append(`
-                    <a href="images/artworks/${value.name}" data-poptrox="">
-                        <img src="images/thumbs/${value.name}" alt="Image could not be loaded!" title="${key}'s Artwork" />
+                    <a href="images/artworks/${value.name}" data-fancybox>
+                        <img src="images/thumbs/${value.name}" alt="Image could not be loaded!"/>
                         ${"text" in value? `<div class="short-image-text">${value.text}</div>` : ""}
                         <h3>${key}</h3>
                     </a>
@@ -50,24 +50,6 @@ $(document).ready(async function() {
                 $($(el).children()[0]).fadeIn(250);
             })
         })
-
-        /*console.log("Adding poptrox functionality.")
-        $(".messages").children().each( function(index, child) {
-            $(child).poptrox({
-                onPopupClose: function() { $('body').removeClass('is-covered'); },
-                onPopupOpen: function() { $('body').addClass('is-covered'); },
-                baseZIndex: 10001,
-                useBodyOverflow: false,
-                usePopupEasyClose: true,
-                overlayColor: '#000000',
-                overlayOpacity: 0.75,
-                popupLoaderText: '',
-                fadeSpeed: 500,
-                usePopupDefaultStyling: false,
-                windowMargin: (skel.breakpoint('small').active ? 5 : 50)
-            });
-        });*/
-    //});
 })
 
 function getContentHeightSum(parent) {
@@ -77,7 +59,7 @@ function getContentHeightSum(parent) {
         if ($($(child).find("img")[0]).is("img")) {
             var imgChild = $($(child).find("img")[0]);
             sum += imgChild.prop("naturalHeight")*((screen.width/3)/imgChild.prop("naturalWidth"))
-            sum += 3*messagesFontSize;
+            sum += 2*messagesFontSize;
         }
     })
     return sum;

@@ -2709,15 +2709,26 @@
 		font-size: 13px;
 	}
 	/*@TODO optimize for mobile */
-		
-		#welcome-back-uto {
-			font-size: 6em; 
-			text-align: center;
-			animation: welcomeback-animation;
-			animation-duration: 500ms;
+	#welcome-back-uto {
+		animation-name: welcomeback-animation;
+		animation-duration: 500ms;
+		text-align: center;
+		font-size: 5em;
+	}
+		@media screen and (max-width: 300px) {
+			#welcome-back-uto {
+				font-size: 3em;
+			}
 		}
 
 	@keyframes welcomeback-animation {
 		from {visibility: hidden;}
 		to {visibility: visible;}
+	}
+
+	@media screen and (max-width: 600px) {
+		body {
+			background-attachment: fixed;
+			background-position: cover;
+		}
 	}
