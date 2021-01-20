@@ -37,7 +37,7 @@ $(document).ready(function() {
                 }
                 $(".messages").append(`
                 <a href="https://youtu.be/${value.video_id}" data-fancybox>
-                    <iframe src="${source}" frameborder="0 allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;" allowfullscreen>
+                    <iframe src="${source}" frameborder="0 allow="accelerometer;clipboard-write;encrypted-media;gyroscope;" allowfullscreen>
                     </iframe> 
                     ${"text" in value? `<div class="short-image-text">${value.text}</div>` : ""}
                     <h3>${key}</h3>              
@@ -53,6 +53,12 @@ $(document).ready(function() {
             //$(".messages").children().css("margin-top", "25px")
         }
 
+        for (const [author, message] of Object.entries(messages)) {
+            if (message.type == "image") {
+                $("#artist-name-container").append(`${author} / `)
+            } 
+        }
+        $("#artist-name-container").text($("#artist-name-container").text().replace(/[\/](?=[^\/]*$)/, ""));
 
         // translate and animate translation switch
         $(".messages-text-container.has-translation").on("click", function() {
