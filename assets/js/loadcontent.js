@@ -39,6 +39,7 @@ $(document).ready(function() {
                 <a href="https://youtu.be/${value.video_id}" data-fancybox>
                     <iframe src="${source}" frameborder="0 allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;" allowfullscreen>
                     </iframe> 
+                    ${"text" in value? `<div class="short-image-text">${value.text}</div>` : ""}
                     <h3>${key}</h3>              
                 </a>
                 `)
@@ -47,11 +48,13 @@ $(document).ready(function() {
 
         // Init Masonry with default options
         if (!isMobile() && screen.width > 1000) {
-            $('.messages').masonry({itemSelector: ".messages-text-container, a", gutter: 10}).imagesLoaded().progress( function() {$($(".messages")).masonry('layout')});
-        } else {
-            $(".messages").children().css("margin-top", "25px")
+            $('.messages').masonry({itemSelector: ".messages-text-container, a", gutter: 10}).imagesLoaded().progress( function() {$($(".messages")).masonry('layout'); });
+        } else { // if the device is a mobile- or pretty thin device, just display one column
+            //$(".messages").children().css("margin-top", "25px")
         }
 
+
+        // translate and animate translation switch
         $(".messages-text-container.has-translation").on("click", function() {
             $(this).attr("data-language", toggleLanguage($(this).attr("data-language")))
             var el = this;
