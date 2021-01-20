@@ -98,5 +98,18 @@
         "type": "image",
         "name": "welcome_back_utogrey.jpg",
         "text": "Good morning, sunshine!\nMornings missed you.\nI miss you."
+    },
+    "Cadius" : {
+        "type": "text",
+        "original": "Welcome back Tenshi Uto,\nyou have cured so many people who had a bad time.hope Uto will purify us liked you always do when you return.till then, have a break, you deserved it"
+    },
+    "CytrusZ": {
+        "type": "embed",
+        "source": "youtube",
+        "video_id": "cCZha0zMbRU"
+    },
+    "JackyLin": {
+        "type": "image",
+        "name": "jackylin_tenshimps.jpg"
     }
 }

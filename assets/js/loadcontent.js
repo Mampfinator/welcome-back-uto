@@ -13,6 +13,7 @@ $(document).ready(function() {
 
 
         for (const [key, value] of Object.entries(messages)) {
+            //switch(value.type) {}
             if (value.type == "text") {
                 $(".messages").append(`
                     <div class="messages-text-container${"translated" in value? " has-translation" : ""}" data-language="original">
@@ -28,6 +29,18 @@ $(document).ready(function() {
                         ${"text" in value? `<div class="short-image-text">${value.text}</div>` : ""}
                         <h3>${key}</h3>
                     </a>
+                `)
+            } else if (value.type == "embed") {
+                var source;
+                if (value.source == "youtube") {
+                    source = `https://youtube.com/embed/${value.video_id}`
+                }
+                $(".messages").append(`
+                <a href="https://youtu.be/${value.video_id}" data-fancybox>
+                    <iframe src="${source}" frameborder="0 allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;" allowfullscreen>
+                    </iframe> 
+                    <h3>${key}</h3>              
+                </a>
                 `)
             }
         }

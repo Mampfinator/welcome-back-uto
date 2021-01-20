@@ -11,6 +11,11 @@
     margin-top: 10px;
     float: left;
 }
+@media screen and (max-width: 1000px) {
+    .messages .messages-text-container, .messages a {
+        width: 100%;
+    }
+}
 
 #messages-sizer {
     min-width: 100vw;

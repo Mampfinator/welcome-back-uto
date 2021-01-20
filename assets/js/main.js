@@ -30,7 +30,7 @@ $(function() {
 		});
 
 
-		if (!isMobile()) {
+		if (!isMobile() && screen.width > 1000) {
 			$( window ).scroll( function(){
 				var ypos = $( window ).scrollTop(); //pixels the site is scrolled down
 				var visible = $( window ).height(); //visible pixels
@@ -43,5 +43,7 @@ $(function() {
 				$('body').css('background-position', "center -" + max_scroll + "px");
 				}
 			});
+		} else {
+			$("body").css("background-size", "cover")
 		}
 });
