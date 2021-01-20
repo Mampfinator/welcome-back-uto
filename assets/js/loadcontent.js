@@ -46,8 +46,11 @@ $(document).ready(function() {
         }
 
         // Init Masonry with default options
-        $('.messages').masonry({itemSelector: ".messages-text-container, a", gutter: 10}).imagesLoaded().progress( function() {$($(".messages")).masonry('layout')});
-
+        if (!isMobile() && screen.width > 1000) {
+            $('.messages').masonry({itemSelector: ".messages-text-container, a", gutter: 10}).imagesLoaded().progress( function() {$($(".messages")).masonry('layout')});
+        } else {
+            $(".messages").children().css("margin-top", "25px")
+        }
 
         $(".messages-text-container.has-translation").on("click", function() {
             $(this).attr("data-language", toggleLanguage($(this).attr("data-language")))

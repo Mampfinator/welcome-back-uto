@@ -14,9 +14,15 @@
 @media screen and (max-width: 1000px) {
     .messages .messages-text-container, .messages a {
         width: 100%;
+        margin-top: 10px !important;
     }
 }
 
-#messages-sizer {
-    min-width: 100vw;
+/* Maybe also move eventually */
+#background-dimmer {
+    position:relative;
+    bottom: 0;
+    padding: 0;
+    margin:0;
+    background-color: rgba(0,0,0,.5);
 }

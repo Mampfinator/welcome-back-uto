@@ -1434,7 +1434,7 @@
 		width: 100%;
 	}
 	body {
-		background: linear-gradient(rgba(0,0,0,.35), rgba(0,0,0,.35)), url("../../images/utopia_welcomebackuto_final.png");
+		background: url("../../images/utopia_welcomebackuto_final.png");
 		position: relative;
 		background-color: #000;
 		background-size: 100% auto;
@@ -2489,10 +2489,6 @@
 			.messages {
 				display: block;
 			}
-
-				.messages a {
-					margin: 0 0 2em 0 !important;
-				}
 
 				.messages > div, .messages a {
 					display: block;
