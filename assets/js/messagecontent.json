@@ -113,7 +113,7 @@
         "type": "image",
         "name": "jackylin_tenshimps.jpg"
     },
-    "Watayubi Sensei": {
+    "Watayubi": {
         "type": "image",
         "name": "watayubi_okaeri.png"
     },
@@ -126,8 +126,12 @@
         "name": "chair_OK.PNG",
         "text": "「もし俺はメッセージ間に合わなければこのDiscordメッセージ使っていいよ。」って言った"
     },
-    "Sir Eatsalot (ウェブサイトのクリエイターさん)": {
+    "Sir Eatsalot\n(ウェブサイトのクリエイターさん)": {
         "type": "text",
-        "original": "お帰りなさい、うとさん。待っていたぞ。何があっても、ずっと待っています。いろんなこと話したいけど、今は「帰ってくれてありがとう。」が十分と思う。"
+        "original": "お帰りなさい、うとさん。待っていたぞ。何があっても、ずっと待っています。いろんなこと話したいけど、あの、今は「帰ってくれてありがとう。」が十分と思う。"
+    },
+    "Pixelas": {
+        "type": "image",
+        "name": "pixelas_Welcome_Back_Uto.jpg"
     }
 }
