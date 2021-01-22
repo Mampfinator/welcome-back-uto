@@ -2586,17 +2586,23 @@
 		font-size: 0.9em;
 	}
 
-	@keyframes welcomeback-animation {
-		from {visibility: hidden;}
-		to {visibility: visible;}
-	}
+
+
 	/*@TODO optimize for mobile */
 	#welcome-back-uto {
 		animation-name: welcomeback-animation;
-		animation-duration: 1s;
+		animation-duration: 2s;
 		text-align: center;
 		font-size: 5em;
 	}
+		@keyframes welcomeback-animation {
+			0% {color: rgba(255,255,255,0);}
+			75% {color: rgba(255,255,255,150)}
+			90% {color: rgba(255,255,255, 200)}
+			100% {color: rbga(255,255,255,255);}
+		}
+
+
 	.title-text {
 		font-size: 3em; 
 		text-align: center;
@@ -2617,5 +2623,5 @@
     bottom: 0;
     padding: 0;
     margin:0;
-    background-color: rgba(0,0,0,.5);
+    background-color: rgba(0,0,0,.6);
 }

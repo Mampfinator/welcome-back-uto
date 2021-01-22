@@ -112,5 +112,18 @@
     "JackyLin": {
         "type": "image",
         "name": "jackylin_tenshimps.jpg"
+    },
+    "Watayubi Sensei": {
+        "type": "image",
+        "name": "watayubi_okaeri.png"
+    },
+    "seto": {
+        "type": "image",
+        "name": "seto_utookaeri.jpg"
+    },
+    "Mahogany Chair": {
+        "type": "image",
+        "name": "chair_OK.png",
+        "text": "「もし俺はメッセージ間に合わなければこのDiscordメッセージ使っていいよ。」って言った"
     }
 }

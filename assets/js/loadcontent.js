@@ -30,6 +30,8 @@ $(document).ready(function() {
                         <h3>${key}</h3>
                     </a>
                 `)
+
+                // include option to add disclaimer (requested by Sans w/ a guitar)
             } else if (value.type == "embed") {
                 var source;
                 if (value.source == "youtube") {
