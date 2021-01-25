@@ -5,12 +5,6 @@
 */
 
 
-function isMobile() {
-	if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-		return true;
-	}
-	return false;
-}
 
 
 $(function() {
@@ -25,8 +19,8 @@ $(function() {
 
 
 		// fix wallpaper scrolling
-		$(window).resize(function() {
-			if (!isMobile() && window.width > 736) {
+		/*$(window).resize(function() {
+			if (window.width > 736) {
 				$( window ).scroll( function(){
 					var ypos = $( window ).scrollTop(); //pixels the site is scrolled down
 					var visible = $( window ).height(); //visible pixels
@@ -45,7 +39,8 @@ $(function() {
 
 			$(".messages").masonry("bindResize");
 
-		});
+		});*/
 
+		// heh
 		$(window).resize();
 });
