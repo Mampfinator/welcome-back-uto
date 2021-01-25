@@ -133,5 +133,22 @@
     "Pixelas": {
         "type": "image",
         "name": "pixelas_Welcome_Back_Uto.jpg"
+    },
+    "Hao": {
+        "type": "image",
+        "name": "hao_welcomebackuto.png"
+    },
+    "Red Zero": {
+        "type": "image",
+        "name": "red_zero_uto.png"
+    },
+    "SeikenDrop": {
+        "type": "image",
+        "name": "seiken_welcomeback_letter.gif"
+    },
+    "maru": {
+        "type": "text",
+        "original": "おかえりなさい、うとちゃん！帰ってきてくれて本当に嬉しいです。会いたかったよ。これからもずっと応援します。"
     }
+
 }
