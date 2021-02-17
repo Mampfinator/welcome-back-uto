@@ -19,8 +19,8 @@ $(function() {
 
 
 		// fix wallpaper scrolling
-		/*$(window).resize(function() {
-			if (window.width > 736) {
+		$(window).resize(function() {
+			if (window.width > 812) {
 				$( window ).scroll( function(){
 					var ypos = $( window ).scrollTop(); //pixels the site is scrolled down
 					var visible = $( window ).height(); //visible pixels
@@ -37,10 +37,6 @@ $(function() {
 				$("body").css("background-size", "cover")
 			}
 
-			$(".messages").masonry("bindResize");
-
-		});*/
-
-		// heh
+		})
 		$(window).resize();
 });

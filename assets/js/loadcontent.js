@@ -1,5 +1,4 @@
 var messages;
-const messagesFontSize = parseFloat(getComputedStyle($(".messages").get(0)).fontSize);
 
 $(document).ready(function() {
     $.getJSON("assets/js/messagecontent.json", (data) => {messages = data})
@@ -41,7 +40,7 @@ $(document).ready(function() {
                     </a>
                 `)
                 
-            } else { // if it's nothing else, it's just a text message
+            } else {
                     $(".messages").append(`
                         <div class="messages-text-container${"translated" in message? " has-translation" : ""}" data-language="original">
                             <div>${message.text}</div>
@@ -54,13 +53,8 @@ $(document).ready(function() {
             }
         });
 
-        // Init Masonry with default options
-        //if (screen.width > 736) {
-        //} /*else { // if the device is a mobile- or pretty thin device, just display one column
-        //}*/
-        $("#artist-name-container").text($("#artist-name-container").text().replace(/[\/](?=[^\/]*$)/, ""));
 
-        // translate and animate translation switch
+        $("#artist-name-container").text($("#artist-name-container").text().replace(/[\/](?=[^\/]*$)/, ""));
         $(".messages-text-container.has-translation").on("click", function() {
             $(this).attr("data-language", toggleLanguage($(this).attr("data-language")))
             var el = this;
@@ -72,11 +66,14 @@ $(document).ready(function() {
         })
 
     }).then(() => {
-        $('.messages').masonry({itemSelector: ".messages-text-container, a", gutter: 10}).imagesLoaded().progress( function() {$($(".messages")).masonry('layout'); });
+        if (screen.availHeight > 812) {
+            $('.messages').masonry({itemSelector: ".messages-text-container, a", gutter: 10}).imagesLoaded().progress( function() {$($(".messages")).masonry('layout'); });
+            $(body).resize(function() { $(".messages").masonry("bindResize"); });
+        }
     })
 })
 
-// lazy way of doing it but hey, if it works, it works
+
 function toggleLanguage(curLang) {
     if (curLang == "original") {
         return "translated"
