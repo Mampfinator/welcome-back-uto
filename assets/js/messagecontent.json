@@ -158,6 +158,52 @@
         {
             "author": "Capt-Jules",
             "image": "Uto_Welcome_Back_Capt-Jules.jpg"
+        },
+        {
+            "author": "SeikenDrop",
+            "image": "seiken_WelcomeBackUto.gif"
+        },
+        {
+            "author": "miru",
+            "image": "miru_tenshi_sings.png"
+        },
+        {
+            "author": "sunnyRoyz",
+            "image": "sunnyroyz.jpg"
+        },
+        {
+            "author": "RedZero",
+            "source": "youtube",
+            "video_id": "kNC-Q6jzgLU",
+            "text": "おかえり"
+        },
+        {
+            "author": "Konta",
+            "image": "konta_welcome_back.jpg"
+        },
+        {
+            "author": "Getsuyo Honodera",
+            "image": "getsuyo_uto.png"
+        },
+        {
+            "author": "Azel",
+            "image": "azel_study.jpg"
+        },
+        {
+            "author": "yomou",
+            "image": "youmu_uto_vanilla.jpg"
+        },
+        {
+            "author": "Pon",
+            "image": "pon_welcome_back.png"
+        },
+        {
+            "author": "JK",
+            "image": "JK_uto.jpg"
+        },
+        {
+           "author": "gnaw",
+           "image": "gnaw_uto.png" 
         }
     ]
 }
