@@ -2574,10 +2574,11 @@
 		padding: 1em 0 1em 0;
 		margin: 1em 0 0 0;
 		width: 100vw;
-		background-color: rgb(108, 194, 228);
+		background-color: rgb(94, 178, 211);
 		display: flex;
 		text-align: center;
 		overflow: auto;
+		color:rgb(255, 255, 255)
 	}
 
 	#footer > div {
