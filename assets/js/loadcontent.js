@@ -3,6 +3,7 @@ var messages;
 $(document).ready(function() {
     $.getJSON("assets/js/messagecontent.json", (data) => {messages = data})
     .done(function() {
+        console.log(messages.messages.length)
         messages.messages.forEach(message => {
             if ("image" in message) {
 
